@@ -1,0 +1,67 @@
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PatWeb</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultant</title>
+    <base href="/">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-black text-light fixed-top">
+        <a routerLink="/" class="navbar-brand"><img class="main-logo" src="assets/img/standard_bank_logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item {{routeUrl == '/home'? 'active' : ''}}">
+                    <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{routeUrl == '/about'? 'active' : ''}}" routerLink="/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{routeUrl == '/contact-us'? 'active' : ''}}" routerLink="/contact-us">Clients</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="menu-bar ">
+        <div class="logo ">
+            <a href="# "><img src="assets/img/standard_bank_logo.png " width="50 " height="50 "></a>
+        </div>
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Clients</li>
+        </ul>
+    </div>
+
+    <div class="main ">
+        <app-root></app-root>
+    </div>
+    <script src="assets/js/jquery-3.4.1.min.js "></script>
+    <script src="assets/js/bootstrap.min.js "></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
