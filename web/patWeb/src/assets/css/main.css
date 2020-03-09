@@ -13,6 +13,11 @@ body {
     height: auto !important;
 }
 
+.component-content {
+    margin-top: 30px;
+    min-height: 300px;
+}
+
 .account-alert {
     position: fixed !important;
     top: 65px;
@@ -261,4 +266,8 @@ body {
 
 .fill-orange {
     background-color: orange !important;
+}
+
+.bg-standardbank-blue {
+    background-color: #0033A1;
 }

@@ -1,23 +1,52 @@
-<h2>Customer</h2>
-<div class="select">
-    <select name="slt-1" id="slt-1">
-        <Option>New Customer</Option>
-        <option value="1">Open A Bank Account</option>
-        <option value="2">Open A Savings Investment Account</option>
-        <Option value="3">Non-Resident Banking</Option>
-        <option value="4">Temporary Resident Banking</option>
-        <option value="5">Explore International Solutions</option>
-    </select>
-    <select name="slt-2" id="slt-2">
-        <Option>Existing Customer</Option>
-        <option value="1">Open A Bank Account</option>
-        <option value="2">Open A Savings Investment Account</option>
-        <option value="3">Debit Order Switchhing</option>
-        <option value="4">Foreign Exchange</option>
-        <option value="5">Get Prepaid Gift Card</option>
-        <option value="6">Open A Shari'ah investment Account</option>
-        <Option value="7">Non-Resident Banking</Option>
-        <option value="8">Temporary Resident Banking</option>
-        <option value="9">Explore International Solutions</option>
-    </select>
+<div class="component-content">
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    <h5 class="card-title">Customer</h5>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    <label for="selNewCustomer">New Customer</label>
+                    <select id="selNewCustomer" class="form-control" [ngModel]="newCustomerProduct.id" (change)="SelNewCustomerChanged()">
+                        <option [ngValue]="0">(Please Select)</option>
+                        <option [ngValue]="1">Open A Bank Account</option>
+                        <option [ngValue]="2">Open A Savings Investment Account</option>
+                        <option [ngValue]="3">Non-Resident Banking</option>
+                        <option [ngValue]="4">Temporary Resident Banking</option>
+                        <option [ngValue]="5">Explore International Solutions</option>
+                    </select>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    <label for="selExistingCustomer">Existing Customer</label>
+                    <select id="selExistingCustomer" class="form-control" [ngModel]="existingCustomerProduct.id" (change)="SelExistingCustomerChanged()">
+                        <option [ngValue]="0">(Please Select)</option>
+                        <option [ngValue]="1">Open A Bank Account</option>
+                        <option [ngValue]="2">Open A Savings Investment Account</option>
+                        <option [ngValue]="3">Debit Order Switchhing</option>
+                        <option [ngValue]="4">Foreign Exchange</option>
+                        <option [ngValue]="5">Get Prepaid Gift Card</option>
+                        <option [ngValue]="6">Open A Shari'ah investment Account</option>
+                        <option [ngValue]="7">Non-Resident Banking</option>
+                        <option [ngValue]="8">Temporary Resident Banking</option>
+                        <option [ngValue]="9">Explore International Solutions</option>
+                    </select>
+                </div>
+                Test: {{existingCustomerProduct.id}} - {{newCustomerProduct.id}}
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
