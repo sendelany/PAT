@@ -3,12 +3,18 @@ export enum IdentityDocumentType {
     foreignPasswportNumber = 2
 }
 
+export enum CustomerType {
+    new = 1,
+    existing = 2
+}
+
 export class Customer {
     id: number;
-    personIdentintyNUmber: string;
+    personIdentintyNumber: string;
     identityDocumentType: IdentityDocumentType;
     firstName: string;
     lastName: string;
     phoneNumber: string;
+    emailAddress: string;
     homeAddress: string;
 }

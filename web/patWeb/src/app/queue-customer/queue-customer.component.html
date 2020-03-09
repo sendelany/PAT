@@ -1,0 +1,66 @@
+<div class="component-content">
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    <h2 class="card-title">Hello
+                        <small class="text-muted">there</small></h2>
+                    <p>Welcome to Standard Bank</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    <label for="txtFirstName">First Name</label>
+                    <input type="text" [(ngModel)]="customer.firstName" id="txtFirstName" class="form-control">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    <label for="txtLastName">Last Name</label>
+                    <input type="text" [(ngModel)]="customer.lastName" id="txtLastName" class="form-control">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    <label for="selIdentityType">Identity Type</label>
+                    <select [(ngModel)]="customer.identityDocumentType" id="selIdentityType" class="form-control">
+                        <option [ngValue]="">(Please Select)</option>
+                        <option [ngValue]="1">South African ID</option>
+                        <option [ngValue]="2">Foreign Passport</option>
+                    </select>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    <label for="txtIdentityNumber">Identity Number</label>
+                    <input type="text" [(ngModel)]="customer.personIdentintyNumber" id="txtIdentityNumber" class="form-control">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    <label for="txtMobileNumber">Mobile Number</label>
+                    <input type="tel" [(ngModel)]="customer.phoneNumber" id="txtMobileNumber" class="form-control">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    <label for="txtEmailAddress">Email Address</label>
+                    <input type="email" [(ngModel)]="customer.emailAddress" id="txtEmailAddress" class="form-control">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-12 col-sm-12 form-group">
+                    <label for="txtAddress">Home Address</label>
+                    <textarea class="form-control" id="txtAddress" [(ngModel)]="customer.homeAddress" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="row justify-content-center card-footer">
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    <button class="btn btn-primary mt-5" (click)="Submit()">Queue Me</button>
+                    <button class="btn btn-secondary mt-5 ml-5" (click)="Cancel()">Cancel</button>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

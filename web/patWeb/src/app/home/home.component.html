@@ -4,7 +4,9 @@
         <div class="card-body">
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6 col-sm-12 form-group">
-                    <h5 class="card-title">Customer</h5>
+                    <h2 class="card-title">Hello
+                        <small class="text-muted">there</small></h2>
+                    <p>Welcome to Standard Bank</p>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 form-group">
                     &nbsp;
@@ -13,7 +15,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6 col-sm-12 form-group">
                     <label for="selNewCustomer">New Customer</label>
-                    <select id="selNewCustomer" class="form-control" [ngModel]="newCustomerProduct.id" (change)="SelNewCustomerChanged()">
+                    <select id="selNewCustomer" class="form-control" [(ngModel)]="newCustomerProduct.id" (change)="SelNewCustomerChanged($event)">
                         <option [ngValue]="0">(Please Select)</option>
                         <option [ngValue]="1">Open A Bank Account</option>
                         <option [ngValue]="2">Open A Savings Investment Account</option>
@@ -24,7 +26,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 form-group">
                     <label for="selExistingCustomer">Existing Customer</label>
-                    <select id="selExistingCustomer" class="form-control" [ngModel]="existingCustomerProduct.id" (change)="SelExistingCustomerChanged()">
+                    <select id="selExistingCustomer" class="form-control" [(ngModel)]="existingCustomerProduct.id" (change)="SelExistingCustomerChanged($event)">
                         <option [ngValue]="0">(Please Select)</option>
                         <option [ngValue]="1">Open A Bank Account</option>
                         <option [ngValue]="2">Open A Savings Investment Account</option>
@@ -37,11 +39,10 @@
                         <option [ngValue]="9">Explore International Solutions</option>
                     </select>
                 </div>
-                Test: {{existingCustomerProduct.id}} - {{newCustomerProduct.id}}
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center card-footer">
                 <div class="col-lg-4 col-md-6 col-sm-12 form-group">
-                    <button class="btn btn-primary">Submit</button>
+                    <button class="btn btn-primary mt-5" (click)="QueueCustomer()">Submit</button>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 form-group">
                     &nbsp;
